@@ -10,21 +10,43 @@
     <body>
         <div class="container">
             <div class="row" id="card-container">
-                <div class="col-auto pt-5">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h1>Título exemplo</h1>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                Descrição exemplo da tarefa
+                <div class="col-sm-6">
+                    <h1>Lado esquerdo</h1>
+                    <div class="col-auto pt-5" id="card">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h1>Título exemplo</h1>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    Descrição exemplo da tarefa
+                                </div>
+                            </div>
+                            <div class="card-footer text-right">
+                                <button class="btn btn-danger">Lixeira</button>
+                                <button class="btn btn-warning btn-feito">Feito!</button>
                             </div>
                         </div>
-                        <div class="card-footer text-right">
-                            <button class="btn btn-danger">Lixeira</button>
-                            <button class="btn btn-warning">Feito!</button>
+                    </div>
+                    <div class="col-auto pt-5" id="card">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h1>Título exemplo 2</h1>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    NOVA DESCRICAO
+                                </div>
+                            </div>
+                            <div class="card-footer text-right">
+                                <button class="btn btn-danger">Lixeira</button>
+                                <button class="btn btn-warning btn-feito">Feito!</button>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-6 bg-success" id="direito">
+                    <h2>Está pronto!</h2>
                 </div>
             </div>
         </div>
@@ -69,9 +91,6 @@
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
     </body>
