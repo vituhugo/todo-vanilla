@@ -1,40 +1,54 @@
-function moveParaFeito() {
-    let $elemento_card = $('#card');
-    let $elemento_direito = $('#direito');
+// let btnFeito = document.querySelector('.btn-feito');
 
-    $elemento_direito.append($elemento_card);
-}
+// btnFeito.addEventListener('click', function (event) {
+//     let card = this.parentNode.parentNode;
+//     let pronto = document.getElementById('pronto');
 
-$('.btn-feito').click(moveParaFeito);
+//     pronto.appendChild(card)
+// })
 
-////////////////////////////////////////////////
+//JQUERY
+let $btnFeito = $('.btn-feito');
 
-let n1 = 10;
+$btnFeito.click(function (event) {
+    let $card = $(this).parent().parent();
+    let $pronto = $('#pronto');
 
-n2 = 99;
-function scopoInterno() {
-    let n2 = 0;
-    console.log("DENTRO DA FUNÇÃO", n1, n2);
+    $pronto.append($card);
+})
 
-}
-scopoInterno();
 
-// N2 NÃO EXISTE, ESTÁ DENTRO DA FUNÇÃO
-console.log("FORA DA FUNÇÃO", n1, n2);
+///////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////
+let $btnLixeira = $('.btn-lixeira')
 
-function consultaApiFacebook(usuario, senha) {
-    //code
-    logado = { "nome": "Victor", "usuario": "vituhugo" }; // RETORNO DA API
+$btnLixeira.click(function (event) {
+    let card = $(this).parent().parent()
+    card.remove()
+})
+
+///////////////////////////////////////////////////////////////
+
+let form = document.querySelector('form');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let script_card = document.getElementById('placeholder-card')
+    let conteudo_html = script_card.innerHTML
+
+    let titulo = document.getElementById('input-titulo').value;
+    let descricao = document.getElementById('input-descricao').value;
+
+    conteudo_html = conteudo_html.replace("@titulo", titulo);
+    conteudo_html = conteudo_html.replace("@descricao", descricao)
+
+    console.log(conteudo_html);
     
-    return;
-}
+    $container = $('#card-container');
+    $card = $(conteudo_html)
+
+    $container.append($card);
 
 
-
-
-
-
-
-
+});
