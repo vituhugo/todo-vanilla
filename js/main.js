@@ -11,10 +11,33 @@
 let $btnFeito = $('.btn-feito');
 
 $btnFeito.click(function (event) {
+    // Jeito Jquery
+    $(this).hide();
+    $('.btn-desfazer').show();
+    // Jeito JS
+    // this.style.display = "none";
+    // document.querySelector('.btn-desfazer').style.display = "inline-block";
+
     let $card = $(this).parent().parent();
     let $pronto = $('#pronto');
 
     $pronto.append($card);
+})
+
+
+let $btnDesfazer = $('.btn-desfazer');
+$btnDesfazer.click(function (event) {
+    // Jeito Jquery
+    $(this).hide();
+    $('.btn-feito').show();
+    // Jeito JS
+    // this.style.display = "none";
+    // document.querySelector('.btn-desfazer').style.display = "inline-block";
+
+    let $card = $(this).parent().parent();
+    let $card_container = $('#card-container');
+
+    $card_container.append($card);
 })
 
 
@@ -49,6 +72,4 @@ form.addEventListener('submit', function (event) {
     $card = $(conteudo_html)
 
     $container.append($card);
-
-
 });
